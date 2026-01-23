@@ -25,6 +25,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: relative; /* allows footer to be pinned */
     }
 
     main {
@@ -32,24 +33,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 1rem; /* small padding for mobile edges */
     }
 
     main img {
-      max-width: 60vw;
-      max-height: 60vh;
+      max-width: 80vw;   /* scales nicely on small screens */
+      max-height: 60vh;  /* keeps vertical balance */
+      height: auto;
+      width: auto;
     }
 
     footer {
-      width: 100%;
-      padding: 1.5rem 4rem 1.5rem 4rem; /* left and right padding */
-      text-align: left;
-      font-size: 0.85rem;
+      position: absolute; 
+      bottom: 3vh;       /* responsive distance from bottom */
+      left: 5vw;         /* responsive gap from left */
+      font-size: 0.9rem;
       opacity: 0.8;
       line-height: 1.4;
+      text-align: left;
     }
 
     footer a {
-      color: #aaa; /* slightly grey email link */
+      color: #aaa;       /* slightly grey email link */
       text-decoration: none;
     }
   </style>
@@ -57,15 +62,12 @@
 
 <body>
   <main>
-    <img src="ursaMinus.invert.1024px.png" alt="ursaminus logo">
+    <img src="ursaMinus.invert.1024px.png" alt="Ursaminus logo">
   </main>
 
   <footer>
-    Tiny London Games Studio<br>
-    <br>
-    <a href="mailto:contact@ursaminus.com">
-      contact@ursaminus.com
-    </a>
+    Tiny London Games Studio<br><br>
+    <a href="mailto:contact@ursaminus.com">contact@ursaminus.com</a>
   </footer>
 </body>
 </html>
